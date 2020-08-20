@@ -1,4 +1,7 @@
-### Python Programming in Water Resources Engineering and Research
+### Python Programming for Water Resources Engineering and Research
+
+![rhone](https://github.com/Ecohydraulics/media/raw/master/jpg/hydraulics-1d.jpg)
+*<sub>The Rhone River in Switzerland (source: Sebastian Schwindt 2014).</sub>*
 
 ***
 
@@ -7,6 +10,16 @@
 >	***Background***: The Manning-Strickler discharge formula is one of the most popular methods to derive cross-section averaged stage-discharge relations. Its backward solution for interpolating the water depth as a function of discharge is step-wise developed in this exercise.
 
 >   ***Goals***: Write basic script and use loops. Write a function and parse optional keyword arguments (`**kwargs`). 
+
+>   ***Requirements***: *Python* libraries: *math* (standard library). Read and understand how [loops](https://hydro-informatics.github.io/hypy_pyloop.html) and [functions](https://hydro-informatics.github.io/hypy_pyfun.html) work in *Python*. 
+
+Get ready by cloning the exercise repository:
+
+```
+git clone https://github.com/Ecohydraulics/Exercise-ManningStrickler.git
+```
+
+
 
 ## The theory
 The [*Gauckler-Manning-Strickler formula*](https://en.wikipedia.org/wiki/Manning_formula) (or *Strickler formula* in Europe) relates water depth and flow velocity of open channel flow based on the assumption of one-dimensional (cross-section-averaged) flow characteristics. The *Strickler formula* results from a heavy simplification of the [*Navier-Stokes*](https://en.wikipedia.org/wiki/Navier-Stokes_equations) and the [*continuity*](https://en.wikipedia.org/wiki/Continuity_equation) equations. Even though one-dimensional (1D) approaches have largely been replaced by at least two-dimensional (2D) numerical models today, the 1D Strickler formula is still frequently used as a first approximation for boundary conditions.
