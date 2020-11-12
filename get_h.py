@@ -1,4 +1,8 @@
-import numpy as np
+import math as m
+
+
+def calc_discharge(b, h, k_st, m, S):
+    pass
 
 
 def solver(*args, **kwargs):
