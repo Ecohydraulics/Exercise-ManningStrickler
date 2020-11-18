@@ -5,7 +5,7 @@ def calc_discharge(b, h, k_st, m, S):
     pass
 
 
-def solver(*args, **kwargs):
+def interpolate_h(*args, **kwargs):
     pass
 
 
@@ -18,4 +18,4 @@ if __name__ == '__main__':
     S_0 = 0.005     # channel slope
 
     # call the solver with user-defined channel geometry and discharge
-    h_n = solver(Q, b, n_m=n_m, m=m, S0=S_0)
+    h_n = interpolate_h(Q, b, n_m=n_m, m=m, S0=S_0)
