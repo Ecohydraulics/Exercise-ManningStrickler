@@ -33,8 +33,8 @@ where:
 
 * *u* is the cross-section-averaged flow velocity in (m/s)
 * *k<sub>st</sub>* is the *Strickler* coefficient in *fictional* (m<sup>1/3</sup>/s) corresponding to the inverse of [Manning's *n<sub>m</sub>*](http://www.fsl.orst.edu/geowater/FX3/help/8_Hydraulic_Reference/Mannings_n_Tables.htm).
-	- *k<sub>st</sub>* &asymp; 20 (*n*&asymp;0.05) for rough, complex, and near-natural rivers
-	- *k<sub>st</sub>* &asymp; 90 (*n*&asymp;0.011) for smooth, concrete-lined channels
+	- *k<sub>st</sub>* &asymp; 20 (*n<sub>m</sub>*&asymp;0.05) for rough, complex, and near-natural rivers
+	- *k<sub>st</sub>* &asymp; 90 (*n<sub>m</sub>*&asymp;0.011) for smooth, concrete-lined channels
 	- *k<sub>st</sub>* &asymp; 26/*D<sub>90</sub><sup>1/6</sup>* (approximation based on the grain size *D<sub>90</sub>*, where 90% of the surface sediment grains are smaller, according to [Meyer-Peter and Müller 1948](http://resolver.tudelft.nl/uuid:4fda9b61-be28-4703-ab06-43cdc2a21bd7))
 * *S* is the hypothetic energy slope (m/m), which can be assumed to correspond to the channel slope for steady, uniform flow conditions.
 * *R<sub>h</sub>* is the hydraulic radius in (m)
@@ -65,7 +65,7 @@ Cast the calculation into a function (e.g., `def calc_discharge(b, h, k_st, m, S
 ## Flexibilize
 Make the function more flexible through the usage of optional keywords arguments ([`**kwargs`](https://hydro-informatics.com/jupyter/py_pyfun.html#keyword-arguments-kwargs)) so that a user can optionally either provide the *D<sub>90</sub>* (`D90`), the *Strickler* coefficient *k<sub>st</sub>* (`k_st`), or *Manning's n* (`n_m`)
 
->	***Tip***: Internally, use only *Manning's n* for the calculations and parse `kwargs.items()` to find out the `kwargs` provided by a user.
+>	***Tip***: Internally, use only *Manning's n<sub>m</sub>* for the calculations and parse `kwargs.items()` to find out the `kwargs` provided by a user.
 
 ## Invert the function
 
