@@ -11,7 +11,7 @@
 
 >   ***Goals***: Write basic script and use loops. Write a function and parse optional keyword arguments (`**kwargs`). 
 
->   ***Requirements***: *Python* libraries: *math* (standard library). Read and understand how [loops](https://hydro-informatics.github.io/hypy_pyloop.html) and [functions](https://hydro-informatics.github.io/hypy_pyfun.html) work in *Python*. 
+>   ***Requirements***: *Python* libraries: *math* (standard library). Read and understand how [loops](https://hydro-informatics.com/jupyter/py_pyloop.html) and [functions](https://hydro-informatics.com/jupyter/py_pyfun.html) work in *Python*. 
 
 Get ready by cloning the exercise repository:
 
@@ -22,7 +22,8 @@ git clone https://github.com/Ecohydraulics/Exercise-ManningStrickler.git
 
 
 ## The theory
-The [*Gauckler-Manning-Strickler formula*](https://en.wikipedia.org/wiki/Manning_formula) (or *Strickler formula* in Europe) relates water depth and flow velocity of open channel flow based on the assumption of one-dimensional (cross-section-averaged) flow characteristics. The *Strickler formula* results from a heavy simplification of the [*Navier-Stokes*](https://en.wikipedia.org/wiki/Navier-Stokes_equations) and the [*continuity*](https://en.wikipedia.org/wiki/Continuity_equation) equations. Even though one-dimensional (1D) approaches have largely been replaced by at least two-dimensional (2D) numerical models today, the 1D Strickler formula is still frequently used as a first approximation for boundary conditions.
+The [*Gauckler-Manning-Strickler formula*](https://en.wikipedia.org/wiki/Manning_formula) (or *Strickler formula* in Europe) relates water depth and flow velocity of open channel flow based on the assumption of one-dimensional (cross-section-averaged) flow characteristics. The *Strickler formula* results from a heavy simplification of the [*Navier-Stokes*](https://hydro-informatics.com/documentation/glossary.html#term-Navier-Stokes-equations) and the [*continuity*](https://hydro-informatics.com/documentation/glossary.html#term-Continuity-equation) equations. Even though one-dimensional (1d) approaches have largely been replaced by at least two-dimensional (2d) numerical models today, the 1d Strickler formula is still frequently used as a first approximation for boundary conditions.
+
 
 The basic shape of the *Strickler formula* is:
 
@@ -31,7 +32,7 @@ The basic shape of the *Strickler formula* is:
 where:
 
 * *u* is the cross-section-averaged flow velocity in (m/s)
-* *k<sub>st</sub>* is the *Strickler* coefficient in *fictional* (m<sup>1/3</sup>/s) corresponding to the inverse of [*Manning's n*](http://www.fsl.orst.edu/geowater/FX3/help/8_Hydraulic_Reference/Mannings_n_Tables.htm).
+* *k<sub>st</sub>* is the *Strickler* coefficient in *fictional* (m<sup>1/3</sup>/s) corresponding to the inverse of [Manning's *n<sub>m</sub>*](http://www.fsl.orst.edu/geowater/FX3/help/8_Hydraulic_Reference/Mannings_n_Tables.htm).
 	- *k<sub>st</sub>* &asymp; 20 (*n*&asymp;0.05) for rough, complex, and near-natural rivers
 	- *k<sub>st</sub>* &asymp; 90 (*n*&asymp;0.011) for smooth, concrete-lined channels
 	- *k<sub>st</sub>* &asymp; 26/*D<sub>90</sub><sup>1/6</sup>* (approximation based on the grain size *D<sub>90</sub>*, where 90% of the surface sediment grains are smaller, according to [Meyer-Peter and Müller 1948](http://resolver.tudelft.nl/uuid:4fda9b61-be28-4703-ab06-43cdc2a21bd7))
@@ -62,7 +63,7 @@ Write a script that prints the discharge as a function of the channel base width
 Cast the calculation into a function (e.g., `def calc_discharge(b, h, k_st, m, S): ...`) that returns the discharge *Q*.
 
 ## Flexibilize
-Make the function more flexible through the usage of optional keywords arguments ([`**kwargs`](https://hydro-informatics.github.io/hypy_pyfun.html#keyword-arguments-kwargs)) so that a user can optionally either provide the *D<sub>90</sub>* (`D90`), the *Strickler* coefficient *k<sub>st</sub>* (`k_st`), or *Manning's n* (`n_m`)
+Make the function more flexible through the usage of optional keywords arguments ([`**kwargs`](https://hydro-informatics.com/jupyter/py_pyfun.html#keyword-arguments-kwargs)) so that a user can optionally either provide the *D<sub>90</sub>* (`D90`), the *Strickler* coefficient *k<sub>st</sub>* (`k_st`), or *Manning's n* (`n_m`)
 
 >	***Tip***: Internally, use only *Manning's n* for the calculations and parse `kwargs.items()` to find out the `kwargs` provided by a user.
 
