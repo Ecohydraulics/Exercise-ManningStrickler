@@ -1,6 +1,6 @@
 ### Python Programming for Water Resources Engineering and Research
 
-![rhone](https://github.com/Ecohydraulics/media/raw/master/jpg/hydraulics-1d.jpg)
+![rhone](https://github.com/Ecohydraulics/media/raw/main/jpg/hydraulics-1d.jpg)
 *<sub>The Rhone River in Switzerland (source: Sebastian Schwindt 2014).</sub>*
 
 ***
@@ -42,7 +42,7 @@ where:
 
 The hydraulic radius *R<sub>h</sub>* is the ratio of wetted area *A* and wetted perimeter *P*. Both *A* and *P* can be calculated as a function of the water depth *h* and the channel base width *b*. Many channel cross-sections can be approximated with a trapezoidal shape, where the water surface width *B*=*b+2·h·m* (with *m* being the bank slope as indicated in the figure below).
 
-![FlowCrossSection](https://github.com/Ecohydraulics/media/raw/master/png/flow-cs.png)
+![FlowCrossSection](https://github.com/Ecohydraulics/media/raw/main/png/flow-cs.png)
 
 Thus, *A* and *P* result from the following formulas:
 
